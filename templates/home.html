@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="centeral-pan">
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/1.png' %}" id="image1"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage even" src="{% static 'images/4.png' %}" id="image2"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/3.png' %}" id="image3"/>
+	</div>
+<!-- 	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/4.png' %}" id="image4"/>
+	</div> -->
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/5.png' %}" id="image5"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/1.png' %}" id="image1"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage even" src="{% static 'images/4.png' %}" id="image2"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/3.png' %}" id="image3"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/4.png' %}" id="image4"/>
+	</div>
+	<div class="imageWrpr">
+		<span class="toolTip" text="building"></span>
+		<img class="homeimage odd" src="{% static 'images/5.png' %}" id="image5"/>
+	</div>
+</div>
+<div class="footer-area">
+	<span id="footerText"><span id="surfaceText">Surfaces</span> <span id="studiosText">Studios<span>
+</div>
+	{% block js_block %}
+		<script>
+			// $(".homeimage").click(function(){
+			// 	$(".homeimage").each(function(){
+			// 		$(this).css("height","120px");
+			// 	})
+			// 	$(this).css('height', "50%");
+			// });
+			$(window).mousemove(function(event){
+				var x = event.pageX;
+				var y = event.pageY;
+				var window_size_x = $(window).height();
+				var window_size_y = $(window).width();
+				var moving_param = 50;
+				$(".homeimage").each(function(){
+					if($(this).hasClass("odd")){
+						var temp_x = (window_size_x - x)/moving_param;
+						var temp_y = (window_size_y + y)/moving_param;
+						$(this).css("transform", "translate("+temp_x+"px, "+temp_y+"px)");
+						// $(this).css("transform", "translateY("+temp_y+"px)");
+					}
+				});
+
+				$(".homeimage").each(function(){
+					if($(this).hasClass("even")){
+						var temp_x = (window_size_x + x)/moving_param;
+						var temp_y = (window_size_y - y)/moving_param;
+						$(this).css("transform", "translate("+temp_x+"px,"+temp_y+"px)");
+						// $(this).css("transform", "translateX("+temp_y+"px)");
+					}
+				});
+			});
+
+			$(".homeimage").mouseover(function(){
+				var text = $(this).parent(".imageWrpr").find(".toolTip").attr("text");
+				console.log(text);
+			});
+		</script>
+	{% endblock %}
+{% endblock %}

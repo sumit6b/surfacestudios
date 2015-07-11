@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<style>
+	#abtimg{
+		height: 400px;
+	}
+	#abttitle{
+		text-transform: uppercase;
+  font-weight: bold;
+    padding: 20px 0px 14px 10px;
+	}
+	#abtcontent{
+		  max-width: 500px;
+		    display: inline-block;
+	}
+	#abtimg{
+ position: relative;
+  top: 15px;
+  left: 70px;
+  height: 420px;
+	}
+	#abtWrpr{
+    display: inline-block;
+  margin-left: 15%;
+  width: 100%;
+	}
+	.bld{
+		font-weight: bold;
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div id="abtWrpr">
+	<div id="abtcontent">
+		<div id="abttitle">About us</div>
+		<div>
+			<div>Our firmwas established by a group of enthusiastic and young architects. Over the years, the firm's business evolved to include a bread spectrum of services and talents. Today, we offer specialized aread of practice, which are based on our client's needs and the expertise of our principals and staff.</div>
+			<ul>
+				<li><span class="bld">Surface Studios</span> offers a broad staff of experienced professionals and has the "firepower" to bring a focues team onto a project to meet tight schedules with the right techinal knowledge.</li>
+				<li><span class="bld">Surface Studios</span>: noted among clients and contractors for our design and technical strengths, and attention to details.</li>
+				<li><span class="bld">Our Mission</span>: to create successful and sustainable design solutions that energiezes our client and enriches our communities.</li>
+				<li><span class="bld">Our Vision</span> to be the most respected design firm in India and a leading firm in our fields of expertise.</li>
+				<li><span class="bld">Our Goal</span>: to proved exceptional design in perfect balance with our client's requirements, resulting in dynamic, successful projects with a high value for clients' investment.</li>
+			</ul>
+		</div>
+	</div>
+	<img id="abtimg" src="{% static 'images/trangel.png' %}" />
+
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<style>
+	#imageWrpr{
+		overflow-y: scroll;
+		overflow-x: hidden; 
+		max-height: 650px;
+	}
+	#imageWrpr img{
+		height: 200px;
+		margin: 40px 20px;
+		cursor: pointer;
+	}
+</style>
+{% endblock %}
+{% block content %}
+<div id="imageWrpr">
+	<img src="{% static 'images/architecture/square/1.jpg' %}">
+	<img src="{% static 'images/architecture/square/2.jpg' %}">
+	<img src="{% static 'images/architecture/square/3.jpg' %}">
+	<img src="{% static 'images/architecture/square/4.jpg' %}">
+	<img src="{% static 'images/architecture/square/5.jpg' %}">
+	<img src="{% static 'images/architecture/square/6.jpg' %}">
+	<img src="{% static 'images/architecture/square/7.jpg' %}">
+	<img src="{% static 'images/architecture/square/8.jpg' %}">
+	<img src="{% static 'images/architecture/square/9.jpg' %}">
+	<img src="{% static 'images/architecture/square/10.jpg' %}">
+	<img src="{% static 'images/architecture/square/11.jpg' %}">
+	<img src="{% static 'images/architecture/square/12.jpg' %}">
+	<img src="{% static 'images/architecture/square/13.jpg' %}">
+</div>
+{% endblock %}

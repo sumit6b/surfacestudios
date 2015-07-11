@@ -1,0 +1,105 @@
+#footerText, #navbarContnt{
+}
+#footerText{
+	text-transform: lowercase;
+}
+
+#navbarContnt li a:link, 
+#navbarContnt li a:visited, 
+#navbarContnt li a:active, 
+#navbarContnt li a:hover{
+	color: #909090;
+	text-decoration: none;
+}
+
+#navbarContnt{
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+#navbarContnt li{
+	text-transform: uppercase;
+	list-style-type: none;
+	display: inline;
+	padding: 0px 15px;
+	margin: 5px 0px;
+	border-right: 1px solid #909090;
+
+	
+}
+#navbarContnt li a{
+		  position: relative;
+  top: -1px;
+}
+#navbarContnt li:last-child{
+	  border-right: none
+}
+#surfaceText{
+	color:#2B95EB;
+}
+#studiosText{
+	color: #D2D2D2;;
+}
+.footer-area{
+  position: absolute;
+  top: 40%;
+  width: 98%;
+  padding: 10px 0px;
+  font-size: 6em;
+  text-align: center;
+}
+.navbarWrpr{
+	  padding: 20px;
+}
+.homeimage{
+	height: 120px;
+	padding: 20px;
+	cursor: pointer;
+	transition: 0.1s cubic-bezier(0, 1.12, 0, 1.05);
+}
+.centeral-pan{
+	/*transform: translateY(50%);*/
+	  height: 600px;
+}
+
+#image1{
+	position: relative;
+	top:20%;
+	left:5%;
+	right:;
+
+}
+#image2{
+	position: relative;
+	top: 5%;
+	left: 17%;
+	right:;
+
+}
+#image3{
+	position: relative;
+	top: 45%;
+	left:;
+	right:;
+
+}
+#image4{
+	position: relative;
+	top:20%;
+	left:;
+	right: -18%;
+
+}
+#image5{
+	position: relative;
+	top:60%;
+	left:;
+	right:;
+
+}
+
+.imageWrpr{
+	display: inline;
+}
